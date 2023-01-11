@@ -2,25 +2,25 @@ namespace Lab4.Command;
 
 public class EatingOptions
 {
-    private readonly ICommand openCommand;
-    private readonly ICommand saveCommand;
-    private readonly ICommand closeCommand;
+    private readonly ICommand eatWithForkCommand;
+    private readonly ICommand eatWithHandsCommand;
+    private readonly ICommand eatWithSpoonCommand;
     public EatingOptions(ICommand eatWithFork, ICommand eatWithHands, ICommand eatWithSpoon)
     {
-        this.openCommand = eatWithFork;
-        this.saveCommand = eatWithHands;
-        this.closeCommand = eatWithSpoon;
+        this.eatWithForkCommand = eatWithFork;
+        this.eatWithHandsCommand = eatWithHands;
+        this.eatWithSpoonCommand = eatWithSpoon;
     }
     public void ChooseFork()
     {
-        openCommand.Execute();
+        eatWithForkCommand.Execute();
     }
     public void ChooseHands()
     {
-        saveCommand.Execute();
+        eatWithHandsCommand.Execute();
     }
     public void ChooseSpoon()
     {
-        closeCommand.Execute();
+        eatWithSpoonCommand.Execute();
     }
 }

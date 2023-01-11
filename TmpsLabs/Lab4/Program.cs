@@ -49,7 +49,7 @@ ICommand eatWithHandsCommand = new EatWithHandsCommand(food);
 ICommand eatWithSpoonCommand = new EatWithSpoonCommand(food);
 var eatingOptions = new EatingOptions(eatWithForkCommand, eatWithHandsCommand, eatWithSpoonCommand);
 
-Console.WriteLine("Lets choose hands");
+Console.WriteLine("Let's use hands");
 Console.WriteLine();
 
 eatingOptions.ChooseHands();
@@ -84,12 +84,12 @@ Console.WriteLine("3 guards arrived to stop you from leaving the restaurant with
 Console.WriteLine();
 var security1 = new Observer("Alice", order);
 var security2 = new Observer("Bob", order);
-var observers = new Observer("Carol", order);
+var security3 = new Observer("Carol", order);
 //----------
 
 Console.WriteLine();
 
-//Observer
+//State
 var creditCardMachine = new CreditCardMachine();
 
 Console.WriteLine("(credit Card Machine:)");
